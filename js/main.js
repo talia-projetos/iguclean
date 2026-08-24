@@ -40,47 +40,49 @@ window.addEventListener('scroll', () => {
 });
 
 // ── Mapa: Leaflet centrado em Foz do Iguaçu
-const FOZ_CENTER = [-25.5478, -54.5882];
+window.addEventListener('load', function () {
+  const FOZ_CENTER = [-25.5478, -54.5882];
 
-const map = L.map('map', {
-  center: FOZ_CENTER,
-  zoom: 12,
-  scrollWheelZoom: false,
+  const map = L.map('map', {
+    center: FOZ_CENTER,
+    zoom: 12,
+    scrollWheelZoom: false,
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
+    maxZoom: 19,
+  }).addTo(map);
+
+  const icon = L.divIcon({
+    className: '',
+    html: `<div style="
+      width:40px;height:40px;
+      background:#00B3B6;
+      border:3px solid #fff;
+      border-radius:50% 50% 50% 0;
+      transform:rotate(-45deg);
+      box-shadow:0 3px 12px rgba(0,0,0,.35);
+    "></div>`,
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+  });
+
+  L.marker(FOZ_CENTER, { icon })
+    .addTo(map)
+    .bindPopup('<strong>Iguclean</strong><br>Foz do Iguaçu – PR')
+    .openPopup();
+
+  L.circle(FOZ_CENTER, {
+    radius: 14000,
+    color: '#00B3B6',
+    fillColor: '#00B3B6',
+    fillOpacity: 0.12,
+    weight: 2,
+  }).addTo(map);
+
+  setTimeout(() => map.invalidateSize(), 200);
 });
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
-  maxZoom: 19,
-}).addTo(map);
-
-// Marcador central com ícone personalizado
-const icon = L.divIcon({
-  className: '',
-  html: `<div style="
-    width:40px;height:40px;
-    background:#00B3B6;
-    border:3px solid #fff;
-    border-radius:50% 50% 50% 0;
-    transform:rotate(-45deg);
-    box-shadow:0 3px 12px rgba(0,0,0,.35);
-  "></div>`,
-  iconSize: [40, 40],
-  iconAnchor: [20, 40],
-});
-
-L.marker(FOZ_CENTER, { icon })
-  .addTo(map)
-  .bindPopup('<strong>Iguclean</strong><br>Foz do Iguaçu – PR')
-  .openPopup();
-
-// Área de atendimento (círculo de ~8 km da área urbana)
-L.circle(FOZ_CENTER, {
-  radius: 14000,
-  color: '#00B3B6',
-  fillColor: '#00B3B6',
-  fillOpacity: 0.12,
-  weight: 2,
-}).addTo(map);
 
 // ── Formulário de agendamento → WhatsApp
 document.getElementById('agendamentoForm').addEventListener('submit', function (e) {
