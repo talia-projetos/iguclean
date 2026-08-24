@@ -18,8 +18,6 @@ const INSTA_URL = 'https://www.instagram.com/iguclean/';
     el.href = INSTA_URL;
     el.textContent = '@iguclean';
   });
-  document.querySelector('.insta-btn').href = INSTA_URL;
-  document.querySelector('.insta-btn').innerHTML = '<i class="fab fa-instagram"></i> @iguclean';
 })();
 
 // ── Navbar: menu mobile
