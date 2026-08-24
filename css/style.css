@@ -292,17 +292,21 @@ ul { list-style: none; }
   border-radius: 24px;
 }
 
-/* Badge abaixo da foto, sem sobreposição */
+/* Badge no canto superior direito da foto */
+.hero-visual { position: relative; }
+
 .hero-float-badge {
+  position: absolute;
+  top: 1.2rem;
+  right: -1rem;
   background: var(--white);
   border-radius: 16px;
-  padding: .85rem 1.2rem;
-  display: inline-flex;
+  padding: .75rem 1rem;
+  display: flex;
   align-items: center;
-  gap: .9rem;
-  box-shadow: 0 4px 20px rgba(10,29,58,.12);
-  border: 1px solid #eef0f4;
-  margin-top: 1rem;
+  gap: .8rem;
+  box-shadow: 0 6px 24px rgba(10,29,58,.18);
+  z-index: 3;
 }
 
 .hero-float-icon {
@@ -321,19 +325,28 @@ ul { list-style: none; }
   color: var(--teal);
 }
 
+.hero-float-text {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
 .hero-float-text strong {
-  display: block;
   font-size: .82rem;
   font-weight: 700;
   color: var(--navy);
   white-space: nowrap;
-  margin-bottom: .2rem;
+  line-height: 1.2;
 }
 
-.hero-float-text span i {
+.hero-float-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.hero-float-stars i {
   font-size: .65rem;
   color: #f59e0b;
-  margin-right: 1px;
 }
 
 /* ============================
