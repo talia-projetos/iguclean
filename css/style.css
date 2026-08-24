@@ -140,10 +140,10 @@ ul { list-style: none; }
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: .9rem 1.5rem;
+  padding: .75rem 1.5rem;
 }
 
-.nav-logo img { height: 48px; }
+.nav-logo img { height: 56px; width: auto; display: block; }
 .nav-logo span {
   color: var(--navy);
   font-size: 1.5rem;
