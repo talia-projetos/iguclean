@@ -103,14 +103,14 @@ document.getElementById('agendamentoForm').addEventListener('submit', function (
     : 'A combinar';
 
   const msg = [
-    `Olá! Gostaria de agendar um serviço com a *Iguclean* 🧹`,
+    `Olá! Gostaria de agendar um serviço com a *Iguclean*.`,
     ``,
-    `👤 *Nome:* ${nome}`,
-    `📱 *Contato:* ${telefone}`,
-    `🧹 *Serviço:* ${servico}`,
-    `📅 *Data preferida:* ${dataFmt}`,
-    `📍 *Endereço:* ${endereco}`,
-    obs ? `📝 *Obs.:* ${obs}` : '',
+    `*Nome:* ${nome}`,
+    `*Contato:* ${telefone}`,
+    `*Serviço:* ${servico}`,
+    `*Data preferida:* ${dataFmt}`,
+    `*Endereço:* ${endereco}`,
+    obs ? `*Obs.:* ${obs}` : '',
   ].filter(Boolean).join('\n');
 
   window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');

@@ -184,59 +184,106 @@ ul { list-style: none; }
 }
 
 /* ============================
-   HERO
+   HERO — layout split limpo
    ============================ */
 .hero {
-  min-height: 100vh;
-  display: flex;
+  padding: 7rem 0 5rem;
+  background: var(--white);
+  border-bottom: 1px solid #eef0f4;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(135deg, var(--navy) 0%, #0d2a52 60%, #0f3060 100%);
-  position: relative;
-  overflow: hidden;
-  padding: 8rem 1.5rem 5rem;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="30" r="40" fill="%2300B3B6" opacity=".04"/><circle cx="80" cy="70" r="50" fill="%2300B3B6" opacity=".04"/></svg>') center/cover;
-  pointer-events: none;
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: rgba(0,179,182,.08);
+  color: var(--teal);
+  padding: .35rem .9rem;
+  border-radius: 50px;
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 680px;
-}
-
-.hero-logo {
-  height: 100px;
-  margin: 0 auto 1.5rem;
-  filter: drop-shadow(0 4px 12px rgba(0,179,182,.3));
-}
-
-.hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+.hero-text h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
   font-weight: 700;
-  color: var(--white);
-  margin-bottom: 1rem;
+  color: var(--navy);
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.hero-content p {
-  color: rgba(255,255,255,.8);
-  font-size: 1.1rem;
+.teal { color: var(--teal); }
+
+.hero-text p {
+  color: var(--muted);
+  font-size: 1.05rem;
   margin-bottom: 2rem;
+  max-width: 440px;
+  line-height: 1.7;
 }
 
 .hero-btns {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  border-color: #d0d8e4;
+}
+.btn-ghost:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.btn-ghost i { font-size: .8rem; }
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eef0f4;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.stat span {
+  font-size: .78rem;
+  color: var(--muted);
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-wrap {
+  background: linear-gradient(135deg, #f0fbfb 0%, #e2f6f6 100%);
+  border-radius: 28px;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 40px rgba(0,179,182,.1);
+}
+
+.hero-logo-wrap img {
+  max-height: 240px;
+  width: auto;
 }
 
 /* ============================
@@ -364,41 +411,56 @@ ul { list-style: none; }
 /* ============================
    INSTAGRAM
    ============================ */
-.instagram-embed-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
+#instagram .section-header p { color: var(--muted); }
 
-.instagram-placeholder {
-  background: rgba(255,255,255,.06);
-  border: 2px dashed rgba(0,179,182,.4);
-  border-radius: var(--radius);
-  text-align: center;
-  padding: 3rem 2rem;
-  color: rgba(255,255,255,.8);
-}
-
-.instagram-placeholder i {
-  font-size: 3.5rem;
+.insta-link {
   color: var(--teal);
-  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.insta-link:hover { text-decoration: underline; }
+
+.insta-feed-wrapper {
+  max-width: 960px;
+  margin: 0 auto 2rem;
 }
 
-.instagram-placeholder p {
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
+/* Grid de 3 posts placeholder */
+.insta-grid-placeholder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 }
 
-.insta-btn { font-size: 1rem; }
-
-.instagram-placeholder small {
-  display: block;
-  margin-top: 1.2rem;
-  color: rgba(255,255,255,.4);
-  font-size: .8rem;
+.insta-post-ph {
+  aspect-ratio: 1;
+  background: var(--gray);
+  border: 2px dashed #d0d8e4;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b0bac8;
+  font-size: 2.5rem;
+  transition: var(--transition);
 }
 
-.instagram-placeholder small a { color: var(--teal); }
+.insta-post-ph:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: rgba(0,179,182,.04);
+}
+
+.insta-cta {
+  text-align: center;
+}
+
+.btn-insta {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: var(--white);
+  border: none;
+  font-size: .95rem;
+}
+.btn-insta:hover { opacity: .88; transform: translateY(-2px); }
 
 /* ============================
    AGENDAMENTO
@@ -534,6 +596,20 @@ ul { list-style: none; }
 /* ============================
    RESPONSIVO
    ============================ */
+@media (max-width: 960px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .hero-text p { max-width: 100%; }
+  .hero-btns { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-logo-wrap { padding: 3rem 2.5rem; }
+  .hero-logo-wrap img { max-height: 160px; }
+}
+
 @media (max-width: 900px) {
   .map-wrapper {
     grid-template-columns: 1fr;
@@ -544,6 +620,8 @@ ul { list-style: none; }
     grid-template-columns: 1fr 1fr;
   }
   .footer-brand { grid-column: 1 / -1; }
+
+  .insta-grid-placeholder { gap: .8rem; }
 }
 
 @media (max-width: 720px) {
@@ -566,8 +644,11 @@ ul { list-style: none; }
   }
 
   .hero-btns { flex-direction: column; align-items: center; }
+  .hero-stats { gap: 1.2rem; }
 
   .footer-inner { grid-template-columns: 1fr; }
 
   .form-wrapper { padding: 1.5rem; }
+
+  .insta-grid-placeholder { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; }
 }

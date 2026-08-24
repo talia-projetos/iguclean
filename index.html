@@ -39,16 +39,27 @@
 
   <!-- ========== HERO ========== -->
   <section id="home" class="hero">
-    <div class="hero-content">
-      <img src="assets/logo/logo-vertical.png" alt="Iguclean" class="hero-logo" onerror="this.style.display='none'" />
-      <h1>Limpeza que <span class="gold">transforma</span></h1>
-      <p>Serviços profissionais de limpeza para residências, comércios e empresas em toda Foz do Iguaçu.</p>
-      <div class="hero-btns">
-        <a href="#agendamento" class="btn btn-primary">Agendar agora</a>
-        <a href="#servicos" class="btn btn-outline">Nossos serviços</a>
+    <div class="container hero-container">
+      <div class="hero-text">
+        <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> Foz do Iguaçu, PR</span>
+        <h1>Limpeza profissional que <span class="teal">transforma</span> seu espaço</h1>
+        <p>Residências, comércios e empresas atendidas com pontualidade, produtos de qualidade e equipe treinada.</p>
+        <div class="hero-btns">
+          <a href="#agendamento" class="btn btn-primary">Agendar agora</a>
+          <a href="#servicos" class="btn btn-ghost">Ver serviços <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>100+</strong><span>Clientes atendidos</span></div>
+          <div class="stat"><strong>5 anos</strong><span>de experiência</span></div>
+          <div class="stat"><strong>100%</strong><span>Satisfação garantida</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-wrap">
+          <img src="assets/logo/logo-vertical.png" alt="Iguclean" onerror="this.style.display='none'" />
+        </div>
       </div>
     </div>
-    <div class="hero-bg-overlay"></div>
   </section>
 
   <!-- ========== SERVIÇOS ========== -->
@@ -146,26 +157,42 @@
   </section>
 
   <!-- ========== INSTAGRAM ========== -->
-  <section id="instagram" class="section section-dark">
+  <section id="instagram" class="section">
     <div class="container">
       <div class="section-header">
-        <h2>Siga no Instagram</h2>
-        <p>Veja nossos trabalhos e dicas de limpeza</p>
+        <h2>No Instagram</h2>
+        <p>Acompanhe nossos trabalhos em <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" class="insta-link">@iguclean</a></p>
       </div>
 
-      <!-- Cole aqui o embed do LightWidget (veja instruções abaixo) -->
-      <div class="instagram-embed-wrapper">
-        <div class="instagram-placeholder">
-          <i class="fab fa-instagram"></i>
-          <p>Acesse nosso Instagram para ver os trabalhos mais recentes!</p>
-          <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" class="btn btn-primary insta-btn">
-            <i class="fab fa-instagram"></i> @iguclean
+      <!-- Feed do Instagram via Behold.so (gratuito) -->
+      <!-- Para ativar: acesse behold.so, conecte @iguclean, crie um feed de 3 colunas x 1 linha -->
+      <!-- e substitua o bloco abaixo pelo código que eles geram -->
+      <div class="insta-feed-wrapper" id="instaFeed">
+        <!-- COLE AQUI O CÓDIGO DO BEHOLD.SO -->
+        <!-- Exemplo:
+          <div data-behold-id="SEU_FEED_ID"></div>
+          <script src="https://w.behold.so/widget.js" type="module"></script>
+        -->
+
+        <!-- Placeholder visual enquanto o widget não está configurado -->
+        <div class="insta-grid-placeholder">
+          <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" class="insta-post-ph">
+            <i class="fab fa-instagram"></i>
           </a>
-          <small>Para exibir as fotos automaticamente aqui, adicione o widget do <a href="https://lightwidget.com" target="_blank" rel="noopener">LightWidget</a> (gratuito).</small>
+          <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" class="insta-post-ph">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" class="insta-post-ph">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
-      </div>
-      <!-- FIM do embed do Instagram -->
 
+      </div>
+      <div class="insta-cta">
+        <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" class="btn btn-insta">
+          <i class="fab fa-instagram"></i> Seguir no Instagram
+        </a>
+      </div>
     </div>
   </section>
 
