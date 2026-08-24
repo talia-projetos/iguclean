@@ -72,7 +72,7 @@ window.addEventListener('load', function () {
     .openPopup();
 
   L.circle(FOZ_CENTER, {
-    radius: 14000,
+    radius: 7000,
     color: '#00B3B6',
     fillColor: '#00B3B6',
     fillOpacity: 0.12,
