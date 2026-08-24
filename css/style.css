@@ -345,8 +345,8 @@ ul { list-style: none; }
 }
 
 .hero-float-stars i {
-  font-size: .65rem;
-  color: #f59e0b;
+  font-size: .7rem;
+  color: #f59e0b !important;
 }
 
 /* ============================
