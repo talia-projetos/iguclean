@@ -277,8 +277,9 @@ ul { list-style: none; }
 }
 
 .hero-img-wrap {
+  position: relative;
   border-radius: 24px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 12px 50px rgba(10,29,58,.15);
   line-height: 0;
 }
@@ -288,6 +289,53 @@ ul { list-style: none; }
   height: 460px;
   object-fit: cover;
   display: block;
+  border-radius: 24px;
+}
+
+/* Badge flutuante sobre a foto */
+.hero-float-badge {
+  position: absolute;
+  bottom: 1.4rem;
+  left: -1.8rem;
+  background: var(--white);
+  border-radius: 16px;
+  padding: .85rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  box-shadow: 0 8px 32px rgba(10,29,58,.18);
+  z-index: 2;
+}
+
+.hero-float-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(0,179,182,.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-float-icon i {
+  font-size: 1.2rem;
+  color: var(--teal);
+}
+
+.hero-float-text strong {
+  display: block;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+  margin-bottom: .2rem;
+}
+
+.hero-float-text span i {
+  font-size: .65rem;
+  color: #f59e0b;
+  margin-right: 1px;
 }
 
 /* ============================
