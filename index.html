@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iguclean — Limpeza Profissional em Foz do Iguaçu</title>
+  <meta name="description" content="Serviços de limpeza profissional em Foz do Iguaçu. Residências, comércios e empresas. Agende pelo WhatsApp!" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="assets/logo/logo.png" alt="Iguclean" id="nav-logo-img" onerror="this.style.display='none'; document.getElementById('nav-logo-text').style.display='block'" />
+        <span id="nav-logo-text" style="display:none">Iguclean</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#area">Área de Atendimento</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#agendamento" class="btn-nav">Agendar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img src="assets/logo/logo.png" alt="Iguclean" class="hero-logo" onerror="this.style.display='none'" />
+      <h1>Limpeza que <span class="gold">transforma</span></h1>
+      <p>Serviços profissionais de limpeza para residências, comércios e empresas em toda Foz do Iguaçu.</p>
+      <div class="hero-btns">
+        <a href="#agendamento" class="btn btn-primary">Agendar agora</a>
+        <a href="#servicos" class="btn btn-outline">Nossos serviços</a>
+      </div>
+    </div>
+    <div class="hero-bg-overlay"></div>
+  </section>
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nossos Serviços</h2>
+        <p>Soluções completas de limpeza para cada necessidade</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-home"></i></div>
+          <h3>Limpeza Residencial</h3>
+          <p>Limpeza detalhada de casas e apartamentos com produtos de qualidade e equipe treinada.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <h3>Limpeza Comercial</h3>
+          <p>Escritórios, lojas e estabelecimentos com higienização completa e horários flexíveis.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-industry"></i></div>
+          <h3>Limpeza Industrial</h3>
+          <p>Ambientes industriais e galpões com equipamentos específicos e alta eficiência.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-couch"></i></div>
+          <h3>Lavagem de Estofados</h3>
+          <p>Sofás, cadeiras e colchões com extração a vapor e produtos hipoalergênicos.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-wind"></i></div>
+          <h3>Higienização de A/C</h3>
+          <p>Limpeza e higienização de ar-condicionado para ambientes mais saudáveis.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-star"></i></div>
+          <h3>Limpeza Pós-Obra</h3>
+          <p>Remoção de resíduos e acabamento fino após construções e reformas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DIFERENCIAIS ========== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="diferenciais-grid">
+        <div class="diferencial">
+          <i class="fas fa-shield-halved"></i>
+          <h4>Equipe Treinada</h4>
+          <p>Profissionais capacitados e com experiência comprovada</p>
+        </div>
+        <div class="diferencial">
+          <i class="fas fa-leaf"></i>
+          <h4>Produtos Seguros</h4>
+          <p>Produtos biodegradáveis e seguros para sua família e pets</p>
+        </div>
+        <div class="diferencial">
+          <i class="fas fa-clock"></i>
+          <h4>Pontualidade</h4>
+          <p>Respeitamos seu tempo com horários definidos e cumpridos</p>
+        </div>
+        <div class="diferencial">
+          <i class="fas fa-thumbs-up"></i>
+          <h4>Satisfação Garantida</h4>
+          <p>Retornamos se algo não atender suas expectativas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAPA ========== -->
+  <section id="area" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Área de Atendimento</h2>
+        <p>Atendemos toda Foz do Iguaçu e região</p>
+      </div>
+      <div class="map-wrapper">
+        <div id="map"></div>
+        <div class="map-info">
+          <h3><i class="fas fa-map-marker-alt gold"></i> Foz do Iguaçu — PR</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Centro e bairros próximos</li>
+            <li><i class="fas fa-check"></i> Vila A, Vila C, Porto Meira</li>
+            <li><i class="fas fa-check"></i> Jardim América, Três Lagoas</li>
+            <li><i class="fas fa-check"></i> JK, Morumbi, Santa Teresa</li>
+            <li><i class="fas fa-check"></i> Toda a região urbana</li>
+          </ul>
+          <a href="#agendamento" class="btn btn-primary" style="margin-top:1rem">Agendar na minha região</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INSTAGRAM ========== -->
+  <section id="instagram" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2>Siga no Instagram</h2>
+        <p>Veja nossos trabalhos e dicas de limpeza</p>
+      </div>
+
+      <!-- Cole aqui o embed do LightWidget (veja instruções abaixo) -->
+      <div class="instagram-embed-wrapper">
+        <div class="instagram-placeholder">
+          <i class="fab fa-instagram"></i>
+          <p>Acesse nosso Instagram para ver os trabalhos mais recentes!</p>
+          <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" class="btn btn-primary insta-btn">
+            <i class="fab fa-instagram"></i> @iguclean
+          </a>
+          <small>Para exibir as fotos automaticamente aqui, adicione o widget do <a href="https://lightwidget.com" target="_blank" rel="noopener">LightWidget</a> (gratuito).</small>
+        </div>
+      </div>
+      <!-- FIM do embed do Instagram -->
+
+    </div>
+  </section>
+
+  <!-- ========== AGENDAMENTO ========== -->
+  <section id="agendamento" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Agende seu Serviço</h2>
+        <p>Preencha o formulário e entraremos em contato pelo WhatsApp</p>
+      </div>
+      <div class="form-wrapper">
+        <form id="agendamentoForm" class="agendar-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Seu nome *</label>
+              <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?" required />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Seu WhatsApp *</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(45) 99999-0000" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="servico">Tipo de serviço *</label>
+              <select id="servico" name="servico" required>
+                <option value="">Selecione...</option>
+                <option>Limpeza Residencial</option>
+                <option>Limpeza Comercial</option>
+                <option>Limpeza Industrial</option>
+                <option>Lavagem de Estofados</option>
+                <option>Higienização de Ar-condicionado</option>
+                <option>Limpeza Pós-Obra</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="data">Data preferida</label>
+              <input type="date" id="data" name="data" />
+            </div>
+          </div>
+          <div class="form-group full">
+            <label for="endereco">Endereço / Bairro *</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro — Foz do Iguaçu" required />
+          </div>
+          <div class="form-group full">
+            <label for="obs">Observações</label>
+            <textarea id="obs" name="obs" rows="3" placeholder="Tamanho do imóvel, necessidades especiais, horário preferido..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-whatsapp btn-full">
+            <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo/logo.png" alt="Iguclean" class="footer-logo" onerror="this.style.display='none'" />
+        <p>Limpeza profissional com qualidade e confiança em Foz do Iguaçu.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#area">Área de Atendimento</a></li>
+          <li><a href="#agendamento">Agendar</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5545999999999" id="footer-wa">WhatsApp</a></p>
+        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/iguclean/" target="_blank" rel="noopener" id="footer-insta">@iguclean</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Foz do Iguaçu — PR</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Iguclean. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5545999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp" id="wa-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
