@@ -562,58 +562,63 @@ ul { list-style: none; }
 .form-group textarea { resize: vertical; }
 
 /* ============================
-   FOOTER
+   FOOTER — gradiente branco → navy
    ============================ */
 .footer {
-  background: #060f1e;
-  color: rgba(255,255,255,.75);
-  padding: 3rem 0 0;
+  background: linear-gradient(to bottom, #f0f5fb 0%, var(--navy) 100%);
+  padding: 2rem 0 0;
 }
 
 .footer-inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 2.5rem;
-  padding-bottom: 2.5rem;
+  gap: 2rem;
+  padding-bottom: 1.8rem;
 }
 
 .footer-logo {
   height: 110px;
   width: auto;
-  margin: -28px 0 0;
-  filter: brightness(0) invert(1);
+  margin: -28px 0 .4rem;
 }
 
-.footer-brand p { font-size: .9rem; line-height: 1.7; max-width: 280px; }
+.footer-brand p {
+  font-size: .85rem;
+  line-height: 1.7;
+  max-width: 280px;
+  color: var(--text);
+}
 
 .footer-links h4,
 .footer-contact h4 {
-  color: var(--white);
-  font-size: .95rem;
-  margin-bottom: 1rem;
+  color: var(--navy);
+  font-size: .9rem;
+  margin-bottom: .8rem;
 }
 
-.footer-links ul li { margin-bottom: .5rem; }
-.footer-links a { color: rgba(255,255,255,.65); font-size: .9rem; transition: color var(--transition); }
+.footer-links ul li { margin-bottom: .4rem; }
+.footer-links a { color: var(--muted); font-size: .85rem; transition: color var(--transition); }
 .footer-links a:hover { color: var(--teal); }
 
 .footer-contact p {
-  font-size: .9rem;
-  margin-bottom: .6rem;
+  font-size: .85rem;
+  margin-bottom: .5rem;
   display: flex;
   align-items: center;
-  gap: .6rem;
+  gap: .5rem;
+  color: var(--text);
 }
 
 .footer-contact i { color: var(--teal); }
+.footer-contact a { color: var(--text); }
 .footer-contact a:hover { color: var(--teal); }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.1);
-  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.15);
+  padding: .8rem 1.5rem;
   text-align: center;
-  font-size: .82rem;
-  color: rgba(255,255,255,.35);
+  font-size: .8rem;
+  color: rgba(255,255,255,.4);
 }
 
 /* ============================
